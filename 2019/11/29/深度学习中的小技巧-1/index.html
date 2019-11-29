@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="论文," />
+  <meta name="keywords" content="深度学习," />
 
 
 
@@ -79,21 +79,28 @@
 
 
 
-<meta name="description" content="大论文构思说明根据现有工作和之后想做的工作，构思一下可能要做的大论文结构，目前大致思路有2个。 思路1-对话摘要###思路描述 根据已有小论文进行拓展形成一篇大论文，在小论文中主要解决的问题主要有两点：  如何解决对话摘要中的用户交互问题 如何解决对话过程中的主题转换检测问题">
-<meta name="keywords" content="论文">
+<meta name="description" content="说明本系列主要用于记录在深度学习开发中我所遇到的感觉比较有用的小技巧，还是瞎写一下，感谢 张瀚 同学对本网站流量的大力支持 正文Tip1：cuda9.0和10.0的切换tensorflow2.0的发布，要求cuda的版本从9.0升级到10.0，那么我们在安装cuda10.0之后，想要跑tensorflow1.X的GPU版本就会遇到报错：ImportError: DLL load failed: 找">
+<meta name="keywords" content="深度学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018-11-29_大论文构思">
-<meta property="og:url" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D&#x2F;index.html">
+<meta property="og:title" content="深度学习中的小技巧(1)">
+<meta property="og:url" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;index.html">
 <meta property="og:site_name" content="D1jiasheng&#39;s blog">
-<meta property="og:description" content="大论文构思说明根据现有工作和之后想做的工作，构思一下可能要做的大论文结构，目前大致思路有2个。 思路1-对话摘要###思路描述 根据已有小论文进行拓展形成一篇大论文，在小论文中主要解决的问题主要有两点：  如何解决对话摘要中的用户交互问题 如何解决对话过程中的主题转换检测问题">
+<meta property="og:description" content="说明本系列主要用于记录在深度学习开发中我所遇到的感觉比较有用的小技巧，还是瞎写一下，感谢 张瀚 同学对本网站流量的大力支持 正文Tip1：cuda9.0和10.0的切换tensorflow2.0的发布，要求cuda的版本从9.0升级到10.0，那么我们在安装cuda10.0之后，想要跑tensorflow1.X的GPU版本就会遇到报错：ImportError: DLL load failed: 找">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D&#x2F;%E5%9B%BE1.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D&#x2F;%E5%9B%BE2.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D&#x2F;%E5%9B%BE3.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D&#x2F;%E5%9B%BE4.png">
-<meta property="og:updated_time" content="2019-11-29T04:37:39.536Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;%E5%9B%BE1.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;%E5%9B%BE2.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;%E5%9B%BE3.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;%E5%9B%BE4.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;%E5%9B%BE5.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;%E5%9B%BE6.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;%E5%9B%BE7.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;%E5%9B%BE8.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;图9.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;图10.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;Users&#x2F;dijiasheng&#x2F;myblog&#x2F;source&#x2F;_posts&#x2F;深度学习中的小技巧-1&#x2F;图11.png">
+<meta property="og:updated_time" content="2019-11-29T14:22:59.227Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D&#x2F;%E5%9B%BE1.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;d1jiasheng.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1&#x2F;%E5%9B%BE1.PNG">
 
 
 
@@ -123,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://d1jiasheng.github.io/2019/11/29/2018-11-29-大论文构思/"/>
+  <link rel="canonical" href="http://d1jiasheng.github.io/2019/11/29/深度学习中的小技巧-1/"/>
 
 
 
 
 
-  <title>2018-11-29_大论文构思 | D1jiasheng's blog</title>
+  <title>深度学习中的小技巧(1) | D1jiasheng's blog</title>
   
 
 
@@ -266,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://d1jiasheng.github.io/2019/11/29/2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/">
+    <link itemprop="mainEntityOfPage" href="http://d1jiasheng.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="d1jiasheng">
@@ -283,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2018-11-29_大论文构思</h1>
+          <h1 class="post-title" itemprop="name headline">深度学习中的小技巧(1)</h1>
         
 
         <div class="post-meta">
@@ -295,7 +302,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-29T09:57:11+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-29T16:30:25+08:00">
                 2019-11-29
               </time>
             
@@ -318,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">深度学习</span>
                   </a>
                 </span>
 
@@ -355,32 +362,63 @@
       
 
       
-        <h1 id="大论文构思"><a href="#大论文构思" class="headerlink" title="大论文构思"></a>大论文构思</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>根据现有工作和之后想做的工作，构思一下可能要做的大论文结构，目前大致思路有2个。</p>
-<h2 id="思路1-对话摘要"><a href="#思路1-对话摘要" class="headerlink" title="思路1-对话摘要"></a>思路1-对话摘要</h2><p>###思路描述</p>
-<p>根据已有小论文进行拓展形成一篇大论文，在小论文中主要解决的问题主要有两点：</p>
-<ul>
-<li>如何解决对话摘要中的用户交互问题</li>
-<li>如何解决对话过程中的主题转换检测问题</li>
-</ul>
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>本系列主要用于记录在深度学习开发中我所遇到的感觉比较有用的小技巧，还是瞎写一下，感谢 <u><strong>张瀚</strong></u> 同学对本网站流量的大力支持</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="Tip1：cuda9-0和10-0的切换"><a href="#Tip1：cuda9-0和10-0的切换" class="headerlink" title="Tip1：cuda9.0和10.0的切换"></a>Tip1：cuda9.0和10.0的切换</h3><p>tensorflow2.0的发布，要求cuda的版本从9.0升级到10.0，那么我们在安装cuda10.0之后，想要跑tensorflow1.X的GPU版本就会遇到报错：<strong><em>ImportError: DLL load failed: 找不到指定的模块</em></strong> 。意思就是tensorflow1.X是不能使用cuda10.0了，请教了别人，说是conda环境下安装toolkit可以实现切换？但是我就是不想用conda怎么办，这里就有一个比较笨的方法。</p>
 <a id="more"></a>
 
-<h3 id="用户交互问题（dialogue-act-weight）"><a href="#用户交互问题（dialogue-act-weight）" class="headerlink" title="用户交互问题（dialogue-act-weight）"></a>用户交互问题（dialogue-act-weight）</h3><p>对话摘要不同于文本摘要，我们还需要关注用户对话的交互问题，小论文中提出了使用 <u><strong><em>dialogue act</em></strong></u> 作为额外的交互信息，dialogue act的表示如下图所示：</p>
-<p><img src="/2019/11/29/2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/%E5%9B%BE1.png" alt="图1"></p>
-<p>如上图所示，每一句话均有一个 dialogue act 与之对应，因此考虑作为额外信息输入，论文中设计拼接方式为下图所示：</p>
-<p><img src="/2019/11/29/2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/%E5%9B%BE2.png" alt="图2"></p>
-<p>由于同种标签对不同语句所提供的作用是不同的，我们没有直接将dialogue act拼接到dialogue后面，而是通过类似self-attention的方式计算标签权重后，再将每次输入的对话和与对话对应的dialogue act相拼接作为新的输入语句。</p>
-<p>其中，<strong>dialogue act</strong>可以理解为每句话中包含的对话交互信息，它表明了每一句话对全文所起到的作用，比如suggest说明这句话是‘建议’，inform说明这句话包含了主要的‘信息’。</p>
-<h3 id="主题转换检测问题（topic-change-info）"><a href="#主题转换检测问题（topic-change-info）" class="headerlink" title="主题转换检测问题（topic-change-info）"></a>主题转换检测问题（topic-change-info）</h3><p>一段文本往往只会产生一个主题，而一段对话其实会产生多个主题，本部分考虑添加主题转换信息让模型检测<strong>主题转变信息</strong>。</p>
-<p>在对话中，往往主题转变之前，用户都会说一些转变对话的语句，在英文中 如 ‘uh, ok’，‘let‘s talk about another thing’之类的语句，这类语句如果只考虑全文含义理解，是并不重要的，但是对于我们的主题转变来说，它们恰好是需要我们关注的。</p>
-<p>因此我们设计如下结构：</p>
-<p><img src="/2019/11/29/2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/%E5%9B%BE3.png" alt="图3"></p>
-<p>使用单向lstm得到对话的大致信息，每句话与该信息做<strong>相似计算</strong>得到一个权重，再用该权重与上一节中得到的dialogue act weight组合，得到的就是每句话提供的内容信息重要程度。之后使用减法或除法等方式使模型更关注转折部分，最终在模型解码时添入该部分信息。</p>
-<h3 id="sentence-gate模型"><a href="#sentence-gate模型" class="headerlink" title="sentence-gate模型"></a>sentence-gate模型</h3><p>参考论文 <strong>“abstractive dialogue summarization with sentence-gated modeling optimized by dialogue act”</strong> 中所提到的sentence-gate机制，在解码时同时生成dialogue act 和 summarization，再通过summarization预测dialogue act，提高summarization的准确率。</p>
-<h3 id="整体模型"><a href="#整体模型" class="headerlink" title="整体模型"></a>整体模型</h3><p>整体模型如下图所示：</p>
-<p><img src="/2019/11/29/2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/%E5%9B%BE4.png" alt="图4"></p>
-<h2 id="思路2-对话摘要与检索式多轮对话"><a href="#思路2-对话摘要与检索式多轮对话" class="headerlink" title="思路2-对话摘要与检索式多轮对话"></a>思路2-对话摘要与检索式多轮对话</h2><h3 id="思路描述"><a href="#思路描述" class="headerlink" title="思路描述"></a>思路描述</h3><p>检索式多轮对话的主要任务是给出对话和回复，给回复打分。当前的多轮对话中考虑了字和句子两方面粒度，希望能够使用对话摘要生成文本粒度并融入到多轮对话中。该部分还未开始研究</p>
-<h3 id="对话摘要生成文本粒度"><a href="#对话摘要生成文本粒度" class="headerlink" title="对话摘要生成文本粒度"></a>对话摘要生成文本粒度</h3><p>探讨对话摘要对多轮对话进行文本粒度的生成，过往的论文中关注了字和句子粒度，但是没有文本粒度，不知道这个想法能否实现。</p>
-<h3 id="多轮对话检索"><a href="#多轮对话检索" class="headerlink" title="多轮对话检索"></a>多轮对话检索</h3><p>探讨多轮对话检索以及根据对话摘要生成信息，并设计出能够将信息整合至对话检索的模型。</p>
+<p>首先我们可以在电脑中同时安装cuda9.0和10.0的版本。具体安装过程就不说了，然后在我们的C盘中就有两个cuda的版本了，如下图：</p>
+<p><img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/%E5%9B%BE1.PNG" alt="图1"></p>
+<p>之后我们进入环境变量配置这两个cuda的环境，需要配置的变量主要有3个部分：</p>
+<ul>
+<li>cuda位置</li>
+</ul>
+<p><img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/%E5%9B%BE2.PNG" alt="图2"></p>
+<ul>
+<li><p>cuda sample 位置（这个我也不知道是干什么的）</p>
+<p><img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/%E5%9B%BE3.PNG" alt="图2"></p>
+</li>
+<li><p>path中cuda lib和libnvvp配置</p>
+<p><img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/%E5%9B%BE4.PNG" alt="图2"></p>
+</li>
+</ul>
+<p>细心的朋友们就会发现，我这边配置的时候，把两个版本的路径都配置了一遍，但是cuda9.0的路径，我把文件夹名称改成了9.1，这样的好处就是系统在找10.0环境的时候，就不会去找9.0的路径了。上图环境变量下系统cuda版本号如下：</p>
+<p><img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/%E5%9B%BE5.PNG" alt="图5"></p>
+<p>那如果我们要改成9.0怎么办，那就手动吧9.1改成9.0，把10.0改成10.1，<strong>这里要注意的是前两个环境配置里面的第一个配置的10.0是要改成9.0而不是10.1奥</strong>。改完之后我们再看cuda版本号：</p>
+<p><img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/%E5%9B%BE6.PNG" alt="图5"></p>
+<p>这样就切换好了，然后就可以用tensorflow1.x啦</p>
+<p>（好像还是有点麻烦的-_-）。</p>
+<h3 id="Tip2：pycharm中的TODO标注"><a href="#Tip2：pycharm中的TODO标注" class="headerlink" title="Tip2：pycharm中的TODO标注"></a>Tip2：pycharm中的TODO标注</h3><p>第一次看到这个东西，是在用pycharm看别人代码的时候，第一眼看上去，我靠这什么，这标注这么亮瞎眼的吗，这黄光，金闪闪，不行，我要学。其实就是如下图的代码标注：</p>
+<p><img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/%E5%9B%BE7.PNG" alt="图7"></p>
+<p>就是在代码后面添加 <strong>#TODO：</strong>然后编写你想写的东西，这个标注主要是提醒你<strong>这个代码需要被检查或者未完成</strong>，所会高光展示。</p>
+<p>同时在pycharm的工具栏底部，可以点开TODO，在里面可以看到文件中所有的TODO标注，点击就可以跳转到相应的代码行，如下图：</p>
+<p><img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/%E5%9B%BE8.PNG" alt="图8"></p>
+<p>有时候用来找代码可能还是比较方便的。</p>
+<p>（虽然我现在也没怎么用过……）</p>
+<h3 id="Tip3：tensorflow的-tf-einsum函数"><a href="#Tip3：tensorflow的-tf-einsum函数" class="headerlink" title="Tip3：tensorflow的 tf.einsum函数"></a>Tip3：tensorflow的 tf.einsum函数</h3><p>第一次见到这个函数，是在看baidu的DAM模型源代码的时候，当时就有点震惊，这啥玩意儿？看不懂，怎么写个表达式就能得到想要的结果了。先来大致感受一下这个函数：</p>
+<img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/图9.png" alt="图9" style="zoom:50%;">
+
+<p>上述代码的输出：</p>
+<img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/图10.png" alt="图10" style="zoom:50%;">
+
+<p>你有感受到这个函数的便利吗，它不仅可以代替tf.matmul，或者是tf.multiply，还能在不同维度的张量之间进行指定的运算，这样的话在编写tensor之间的运算时，用这个简单的函数能够轻松的实现一些复杂的运算。</p>
+<p>我们再来看看tf手册中对这个函数的定义。</p>
+<p><strong>函数的参数</strong>：</p>
+<ul>
+<li><strong>equation</strong>：就是我们希望实现运算的式子</li>
+<li><strong>*inputs</strong>：等式左边输入的张量，个数要与等式中出现的个数相同</li>
+<li><strong>name</strong>：运算名称，可以忽略</li>
+</ul>
+<p><strong>函数的返回</strong>：与等式右边形式相同的张量</p>
+<p>这个函数还是很简单就能上手了，学会合理使用能让你编写代码时事半功倍。</p>
+<p>（我现在好像也只是在复现代码的时候使用过这个函数，嘻嘻）</p>
+<h3 id="Tip4：（1，1）和（1，）是不一样的"><a href="#Tip4：（1，1）和（1，）是不一样的" class="headerlink" title="Tip4：（1，1）和（1，）是不一样的"></a>Tip4：（1，1）和（1，）是不一样的</h3><p>主要是有一次将自己的方法加入到别人代码的时候，发现metric函数一直报错，后来debug的时候发现，原来代码的输出的shape是（1，），在我改了结构之后输出的shape是（1，1），metric中计算准确率的方法就不行了。之前一直觉得这两个shape代表的是一样的，因为这两个看着都是一个括号一个逗号嘛，一看就是二维的，唉。</p>
+<p>把这两个形状的tensor变成list输出看看：</p>
+<img src="/Users/dijiasheng/myblog/source/_posts/深度学习中的小技巧-1/图11.png" alt="图11" style="zoom:50%;">
+
+<p>就可以看出，前面的是2维的，后面的是一维的。</p>
+<p>（你一维的加逗号干嘛呀，唉，关键去掉这个逗号程序还会报错）</p>
+<h2 id="结尾瞎扯"><a href="#结尾瞎扯" class="headerlink" title="结尾瞎扯"></a>结尾瞎扯</h2><p>（我感觉也不知道有啥好瞎扯的技巧了，可能这期写完这个系列基本就玩完儿了吧…… 我太难了呀）</p>
+<p>不过还是会在学习中注意一些比较好玩或者重要的东西，然后在这个系列中记一下的。</p>
 
       
     </div>
@@ -401,7 +439,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://d1jiasheng.github.io/2019/11/29/2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/" title="2018-11-29_大论文构思">http://d1jiasheng.github.io/2019/11/29/2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/</a>
+    <a href="http://d1jiasheng.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/" title="深度学习中的小技巧(1)">http://d1jiasheng.github.io/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -416,7 +454,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E8%AE%BA%E6%96%87/" rel="tag"># 论文</a>
+            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"># 深度学习</a>
           
         </div>
       
@@ -429,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/28/2019-11-28_%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87hexo%E5%8D%9A%E5%AE%A2/" rel="next" title="2019-11-28_我的第一篇hexo博客">
-                <i class="fa fa-chevron-left"></i> 2019-11-28_我的第一篇hexo博客
+              <a href="/2019/11/29/2018-11-29-%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D/" rel="next" title="2018-11-29_大论文构思">
+                <i class="fa fa-chevron-left"></i> 2018-11-29_大论文构思
               </a>
             
           </div>
@@ -438,10 +476,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/" rel="prev" title="深度学习中的小技巧(1)">
-                深度学习中的小技巧(1) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -592,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#大论文构思"><span class="nav-number">1.</span> <span class="nav-text">大论文构思</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路1-对话摘要"><span class="nav-number">1.2.</span> <span class="nav-text">思路1-对话摘要</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户交互问题（dialogue-act-weight）"><span class="nav-number">1.2.1.</span> <span class="nav-text">用户交互问题（dialogue-act-weight）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题转换检测问题（topic-change-info）"><span class="nav-number">1.2.2.</span> <span class="nav-text">主题转换检测问题（topic-change-info）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sentence-gate模型"><span class="nav-number">1.2.3.</span> <span class="nav-text">sentence-gate模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整体模型"><span class="nav-number">1.2.4.</span> <span class="nav-text">整体模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路2-对话摘要与检索式多轮对话"><span class="nav-number">1.3.</span> <span class="nav-text">思路2-对话摘要与检索式多轮对话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#思路描述"><span class="nav-number">1.3.1.</span> <span class="nav-text">思路描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对话摘要生成文本粒度"><span class="nav-number">1.3.2.</span> <span class="nav-text">对话摘要生成文本粒度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多轮对话检索"><span class="nav-number">1.3.3.</span> <span class="nav-text">多轮对话检索</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip1：cuda9-0和10-0的切换"><span class="nav-number">2.1.</span> <span class="nav-text">Tip1：cuda9.0和10.0的切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip2：pycharm中的TODO标注"><span class="nav-number">2.2.</span> <span class="nav-text">Tip2：pycharm中的TODO标注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip3：tensorflow的-tf-einsum函数"><span class="nav-number">2.3.</span> <span class="nav-text">Tip3：tensorflow的 tf.einsum函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip4：（1，1）和（1，）是不一样的"><span class="nav-number">2.4.</span> <span class="nav-text">Tip4：（1，1）和（1，）是不一样的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结尾瞎扯"><span class="nav-number">3.</span> <span class="nav-text">结尾瞎扯</span></a></li></ol></div>
             
 
           </div>
