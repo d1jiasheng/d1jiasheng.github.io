@@ -121,61 +121,6 @@
       </tags>
   </entry>
   <entry>
-    <title>大论文构思（2）</title>
-    <url>/2019/12/03/%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D%EF%BC%882%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="大论文构思-2"><a href="#大论文构思-2" class="headerlink" title="大论文构思(2)"></a>大论文构思(2)</h1><h1 id="一、绪论"><a href="#一、绪论" class="headerlink" title="一、绪论"></a>一、绪论</h1><p>##1.1 研究背景及意义</p>
-<h2 id="1-2-国内外研究现状与分析"><a href="#1-2-国内外研究现状与分析" class="headerlink" title="1.2 国内外研究现状与分析"></a>1.2 国内外研究现状与分析</h2><h3 id="1-2-1-自动文摘生成研究现状分析"><a href="#1-2-1-自动文摘生成研究现状分析" class="headerlink" title="1.2.1 自动文摘生成研究现状分析"></a>1.2.1 自动文摘生成研究现状分析</h3><p>​    介绍自动文摘的当前研究情况</p>
-<h3 id="1-2-2-端到端模型研究现状分析"><a href="#1-2-2-端到端模型研究现状分析" class="headerlink" title="1.2.2 端到端模型研究现状分析"></a>1.2.2 端到端模型研究现状分析</h3><p>​    介绍端到端模型的应用以及研究现状</p>
-<p>###1.2.3 注意力机制的研究现状分析</p>
-<p>​    介绍注意力机制的应用和研究现状</p>
-<h2 id="1-3-本文的研究内容及结构安排"><a href="#1-3-本文的研究内容及结构安排" class="headerlink" title="1.3 本文的研究内容及结构安排"></a>1.3 本文的研究内容及结构安排</h2><h1 id="二、相关工作"><a href="#二、相关工作" class="headerlink" title="二、相关工作"></a>二、相关工作</h1><h2 id="2-1自动文摘生成简介"><a href="#2-1自动文摘生成简介" class="headerlink" title="2.1自动文摘生成简介"></a>2.1自动文摘生成简介</h2><h3 id="2-1-1文本自动文摘生成简介"><a href="#2-1-1文本自动文摘生成简介" class="headerlink" title="2.1.1文本自动文摘生成简介"></a>2.1.1文本自动文摘生成简介</h3><p>​    介绍文本自动文摘</p>
-<h3 id="2-1-2对话自动文摘生成简介"><a href="#2-1-2对话自动文摘生成简介" class="headerlink" title="2.1.2对话自动文摘生成简介"></a>2.1.2对话自动文摘生成简介</h3><p>​    介绍对话自动文摘</p>
-<h3 id="2-1-3-文本自动文摘生成与对话自动文摘生成的异同"><a href="#2-1-3-文本自动文摘生成与对话自动文摘生成的异同" class="headerlink" title="2.1.3 文本自动文摘生成与对话自动文摘生成的异同"></a>2.1.3 文本自动文摘生成与对话自动文摘生成的异同</h3><p>​    介绍文本自动文摘与对话自动文摘的相同与不同，分析其中存在的问题</p>
-<h2 id="2-2-基于注意力机制的端到端学习模型"><a href="#2-2-基于注意力机制的端到端学习模型" class="headerlink" title="2.2 基于注意力机制的端到端学习模型"></a>2.2 基于注意力机制的端到端学习模型</h2><h3 id="2-2-1-端到端模型介绍"><a href="#2-2-1-端到端模型介绍" class="headerlink" title="2.2.1 端到端模型介绍"></a>2.2.1 端到端模型介绍</h3><p>​    seq2seq模型的介绍</p>
-<ul>
-<li>encoder编码</li>
-<li>decoder解码</li>
-</ul>
-<p>###2.2.2 注意力机制介绍</p>
-<p>​    几种注意力机制的介绍</p>
-<ul>
-<li>Loug-attention介绍</li>
-<li>Bno-attention介绍</li>
-<li>self-attention介绍</li>
-</ul>
-<h3 id="2-2-3-基于注意力机制的端到端模型应用在对话摘要中存在的问题"><a href="#2-2-3-基于注意力机制的端到端模型应用在对话摘要中存在的问题" class="headerlink" title="2.2.3 基于注意力机制的端到端模型应用在对话摘要中存在的问题"></a>2.2.3 基于注意力机制的端到端模型应用在对话摘要中存在的问题</h3><h1 id="三、基于dialogue-act-weight的交互信息编码模型"><a href="#三、基于dialogue-act-weight的交互信息编码模型" class="headerlink" title="三、基于dialogue act weight的交互信息编码模型"></a>三、基于dialogue act weight的交互信息编码模型</h1><h2 id="3-1-对话摘要生成中的句子交互问题"><a href="#3-1-对话摘要生成中的句子交互问题" class="headerlink" title="3.1 对话摘要生成中的句子交互问题"></a>3.1 对话摘要生成中的句子交互问题</h2><p>​    介绍在对话摘要中的句子交互问题，主要说明已有论文所做的添加额外交互信息的工作以及我们找到的dialogue act作为额外交互信息</p>
-<h2 id="3-2-dialogue-act-介绍"><a href="#3-2-dialogue-act-介绍" class="headerlink" title="3.2 dialogue act 介绍"></a>3.2 dialogue act 介绍</h2><p>​    介绍dialogue act</p>
-<h2 id="3-3-基于self-attention的dialogue-act-weight生成"><a href="#3-3-基于self-attention的dialogue-act-weight生成" class="headerlink" title="3.3 基于self-attention的dialogue-act-weight生成"></a>3.3 基于self-attention的dialogue-act-weight生成</h2><p>​    介绍如何使用self-attention和dialogue act生成dialogue act weight</p>
-<h2 id="3-4-基于dialogue-act-weight的编码模型"><a href="#3-4-基于dialogue-act-weight的编码模型" class="headerlink" title="3.4 基于dialogue act weight的编码模型"></a>3.4 基于dialogue act weight的编码模型</h2><h3 id="3-4-1-文本转变成向量的embedding方法"><a href="#3-4-1-文本转变成向量的embedding方法" class="headerlink" title="3.4.1 文本转变成向量的embedding方法"></a>3.4.1 文本转变成向量的embedding方法</h3><p>​    使用word2vec的方法将文本转变成向量</p>
-<h3 id="3-4-2-基于双向lstm的信息编码"><a href="#3-4-2-基于双向lstm的信息编码" class="headerlink" title="3.4.2 基于双向lstm的信息编码"></a>3.4.2 基于双向lstm的信息编码</h3><p>​    双向lstm以及信息编码过程</p>
-<p>###3.4.3 dialogue act weight 的编码模型</p>
-<p>​    添加了dialogue act weight 的模型</p>
-<p>##3.5 基于dialogue act weight的交互信息编码模型的实验</p>
-<h3 id="3-5-1-实验流程介绍"><a href="#3-5-1-实验流程介绍" class="headerlink" title="3.5.1 实验流程介绍"></a>3.5.1 实验流程介绍</h3><h3 id="3-5-2-实验结果分析"><a href="#3-5-2-实验结果分析" class="headerlink" title="3.5.2 实验结果分析"></a>3.5.2 实验结果分析</h3><h1 id="四、基于topic-change-info的主题转换检测解码模型"><a href="#四、基于topic-change-info的主题转换检测解码模型" class="headerlink" title="四、基于topic change info的主题转换检测解码模型"></a>四、基于topic change info的主题转换检测解码模型</h1><p>##4.1 对话摘要生成中的主题转换问题</p>
-<p>​    介绍在对话摘要中，主题转变问题以及之前并没有人考虑过这个因素</p>
-<p>##4.2 topic change info的生成</p>
-<p>​    <img src="/2019/12/03/%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D%EF%BC%882%EF%BC%89/图2.png" alt="图2" style="zoom:50%;"></p>
-<p>主要介绍我们如何生成topic change info</p>
-<h2 id="4-3-基于topic-change-info-的主题转换检测解码模型"><a href="#4-3-基于topic-change-info-的主题转换检测解码模型" class="headerlink" title="4.3 基于topic change info 的主题转换检测解码模型"></a>4.3 基于topic change info 的主题转换检测解码模型</h2><h3 id="4-3-1-lstm的解码"><a href="#4-3-1-lstm的解码" class="headerlink" title="4.3.1 lstm的解码"></a>4.3.1 lstm的解码</h3><p>​    介绍如何将编码部分的向量解码以及使用attention机制进行重点信息关注</p>
-<h3 id="4-3-2-topic-change-info-的解码模型"><a href="#4-3-2-topic-change-info-的解码模型" class="headerlink" title="4.3.2 topic change info 的解码模型"></a>4.3.2 topic change info 的解码模型</h3><img src="/2019/12/03/%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D%EF%BC%882%EF%BC%89/图3.png" alt="图3" style="zoom:50%;">
-
-<h2 id="4-4-基于topic-change-info的主题转换检测解码模型的实验"><a href="#4-4-基于topic-change-info的主题转换检测解码模型的实验" class="headerlink" title="4.4 基于topic change info的主题转换检测解码模型的实验"></a>4.4 基于topic change info的主题转换检测解码模型的实验</h2><h3 id="4-4-1-实验流程介绍"><a href="#4-4-1-实验流程介绍" class="headerlink" title="4.4.1 实验流程介绍"></a>4.4.1 实验流程介绍</h3><p>###4.4.2 实验结果分析</p>
-<h1 id="五、基于sentence-gated整合的对话摘要模型"><a href="#五、基于sentence-gated整合的对话摘要模型" class="headerlink" title="五、基于sentence-gated整合的对话摘要模型"></a>五、基于sentence-gated整合的对话摘要模型</h1><h2 id="5-1-sentence-gated"><a href="#5-1-sentence-gated" class="headerlink" title="5.1 sentence-gated"></a>5.1 sentence-gated</h2><h3 id="5-1-1-dialogue-act与summarization的解码"><a href="#5-1-1-dialogue-act与summarization的解码" class="headerlink" title="5.1.1 dialogue act与summarization的解码"></a>5.1.1 dialogue act与summarization的解码</h3><p>​    通过预测dialogue act来提高最终的summarization准确率</p>
-<p>###5.1.2 sentence-gated的引入介绍</p>
-<p>​    描述sentence-gate如何工作</p>
-<p>###5.1.3 基于sentence-gated的解码整合</p>
-<p>​    介绍sentence-gated如何将dialogue act和summarization结合</p>
-<h2 id="5-2-基于sentence-gated-的结合dialogue-act-weight和topic-change-info的整体模型"><a href="#5-2-基于sentence-gated-的结合dialogue-act-weight和topic-change-info的整体模型" class="headerlink" title="5.2 基于sentence-gated 的结合dialogue-act-weight和topic-change-info的整体模型"></a>5.2 基于sentence-gated 的结合dialogue-act-weight和topic-change-info的整体模型</h2><p><img src="/2019/12/03/%E5%A4%A7%E8%AE%BA%E6%96%87%E6%9E%84%E6%80%9D%EF%BC%882%EF%BC%89/%E5%9B%BE4.png" alt="图4"></p>
-<h2 id="5-3-基于sentence-gated整合的对话摘要模型实验"><a href="#5-3-基于sentence-gated整合的对话摘要模型实验" class="headerlink" title="5.3 基于sentence-gated整合的对话摘要模型实验"></a>5.3 基于sentence-gated整合的对话摘要模型实验</h2><p>###5.3.1 实验流程介绍</p>
-<h3 id="5-3-2实验结果分析"><a href="#5-3-2实验结果分析" class="headerlink" title="5.3.2实验结果分析"></a>5.3.2实验结果分析</h3><h1 id="六、结语与展望"><a href="#六、结语与展望" class="headerlink" title="六、结语与展望"></a>六、结语与展望</h1>]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>论文</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深度学习中的小技巧(1)</title>
     <url>/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/</url>
     <content><![CDATA[<img src="/2019/11/29/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7-1/图0.jpg" alt="图0" style="zoom:50%;">
