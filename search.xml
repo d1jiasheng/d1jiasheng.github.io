@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>重学java（1）</title>
+    <url>/2020/02/10/%E9%87%8D%E5%AD%A6java%EF%BC%881%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="java创建对象"><a href="#java创建对象" class="headerlink" title="java创建对象"></a>java创建对象</h2><p>java虚拟机主要包括4个部分：</p>
+<ul>
+<li><p>1.堆：存放对象。</p>
+</li>
+<li><p>2.栈：存放对象的引用。</p>
+</li>
+<li><p>3.静态区：存放被static修饰的变量。</p>
+</li>
+<li><p>4.常量区：存放常量。</p>
+</li>
+</ul>
+<p>对于一条创建对象的语句，如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Car car = <span class="keyword">new</span> Car();</span></pre></td></tr></table></figure>
+
+<p>首先在堆区新建了一个Car（）对象，其次在栈区创建一个p引用，指向堆区新建的Car（）。</p>
+<p>通过类新建一个对象，在堆区都会新建一块区域。</p>
+<p>但是如果使用下面的代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Car car1 = car;</span></pre></td></tr></table></figure>
+
+<p>在栈区会新建一个car1的引用，而car1指向堆区的car（），也就是car和car1此时指向同一个的地址。</p>
+<h2 id="数据和字符串"><a href="#数据和字符串" class="headerlink" title="数据和字符串"></a>数据和字符串</h2><p>通过new出来的对象都会放在堆，而java中有8大基本的数据类型，为了防止每次使用这些类型的时候都要消耗大量内存，这些数据的值都存在常量区中，比如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">2</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</span></pre></td></tr></table></figure>
+
+<p>上述代码执行时，首先查看常量区是否存在2，不存在，开辟一块空间存放，在栈中开辟内存存放i并指向2，当需要创建j时，发现2已经存在，因此直接让j指向2。</p>
+<p>但是如果用new的话，就不同了，如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Integer a = <span class="keyword">new</span> Integer(<span class="number">2</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">Integer b = <span class="keyword">new</span> Integer(<span class="number">2</span>);</span></pre></td></tr></table></figure>
+
+<p>执行代码时候首先在堆中开辟内存存放2，栈中a指向2，接着再在堆中开辟内存存放2，栈中b指向2。也就是说，使用new在堆中存放对象时，是不会检查对象是否重复的，堆只会新建。</p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>String直接赋值的数据也是存放在常量区，因此其使用方式与基本数据类型是一样的，比如下面的代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String a = <span class="string">"abc"</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">String b = a;</span></pre></td></tr><tr><td class="code"><pre><span class="line">String c = <span class="string">"abc"</span>;</span></pre></td></tr></table></figure>
+
+<p>a,b,c三个变量指向的是同一个地址，此时如果改变a的值，令 a= “bcd”, 会在常量区新开辟一个空间存放bcd，a指向bcd，而b，c的指向的地址不变，仍然是abc。</p>
+<p>而使用new String（）创建的字符串对象存放在堆中，直接创建的字符串常量值存放在常量区，这两个地址是不同的，看下面的例子</p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>北京游</title>
     <url>/2019/12/06/%E5%8C%97%E4%BA%AC%E6%B8%B8/</url>
     <content><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>借着出差的机会去了一趟计划去的北京，但是时间不是很富裕，所以在12月6号选择了白天逛故宫，把游玩路线和照片整理一下。这次先把故宫游玩草草的写一下，有时间再补其他地方。</p>
