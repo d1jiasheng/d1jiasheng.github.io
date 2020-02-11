@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="D1jiasheng&#39;s Blog">
 <meta property="og:description" content="java创建对象java虚拟机主要包括4个部分：  1.堆：存放对象。  2.栈：存放对象的引用。  3.静态区：存放被static修饰的变量。  4.常量区：存放常量。   对于一条创建对象的语句，如 1Car car &#x3D; new Car();  首先在堆区新建了一个Car（）对象，其次在栈区创建一个p引用，指向堆区新建的Car（）。 通过类新建一个对象，在堆区都会新建一块区域。 但是如果使用下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-11T10:52:35.425Z">
+<meta property="og:updated_time" content="2020-02-11T10:54:07.593Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -404,6 +404,8 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Car car1 = car;</span></pre></td></tr></table></figure>
 
 <p>在栈区会新建一个car1的引用，而car1指向堆区的car（），也就是car和car1此时指向同一个的地址。</p>
+<a id="more"></a>
+
 <h2 id="数据和字符串"><a href="#数据和字符串" class="headerlink" title="数据和字符串"></a>数据和字符串</h2><p>通过new出来的对象都会放在堆，而java中有8大基本的数据类型，为了防止每次使用这些类型的时候都要消耗大量内存，这些数据的值都存在常量区中，比如</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">2</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</span></pre></td></tr></table></figure>
 

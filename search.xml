@@ -23,6 +23,8 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Car car1 = car;</span></pre></td></tr></table></figure>
 
 <p>在栈区会新建一个car1的引用，而car1指向堆区的car（），也就是car和car1此时指向同一个的地址。</p>
+<a id="more"></a>
+
 <h2 id="数据和字符串"><a href="#数据和字符串" class="headerlink" title="数据和字符串"></a>数据和字符串</h2><p>通过new出来的对象都会放在堆，而java中有8大基本的数据类型，为了防止每次使用这些类型的时候都要消耗大量内存，这些数据的值都存在常量区中，比如</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">2</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> j = <span class="number">2</span>;</span></pre></td></tr></table></figure>
 
