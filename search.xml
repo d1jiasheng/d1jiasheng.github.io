@@ -5,6 +5,8 @@
     <url>/2020/03/25/%E9%98%BF%E9%87%8C%E7%AC%94%E8%AF%951/</url>
     <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>一个3✖️n的二维数组，找到从第一列到最后一列的路径，使得|n1-n2|+|n2-n3|+|n3-n4|+…+|ni-1 -ni|最小</p>
 <p>输入第一行为列数，接下来的三行是具体的正整数</p>
+<a id="more"></a>
+
 <p>输入</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">5</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="number">5</span> <span class="number">9</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="number">4</span> <span class="number">7</span> <span class="number">4</span> <span class="number">10</span> <span class="number">3</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="number">2</span> <span class="number">10</span> <span class="number">9</span> <span class="number">2</span> <span class="number">3</span></span></pre></td></tr></table></figure>
 
